@@ -44,7 +44,7 @@ public class UserService {
 	}
 	
 	public List<MyAccount> getMyAccountByMyPhone(String myPhone) {
-		String url = "http://localhost:8282/myPhone/"+myPhone;
+		String url = "http://my-telecom-account.default.svc.cluster.local:8282/myPhone/"+myPhone;
 		List<MediaType> mediaTypes = new ArrayList<MediaType>();
 		mediaTypes.add(MediaType.APPLICATION_JSON);
 		HttpHeaders headers = new HttpHeaders();
@@ -58,7 +58,7 @@ public class UserService {
 	}
 	
 	public MyAccount UpdateMyAccountToNewPlan(long accountId, long planId) {
-		String url = "http://localhost:8282/update/account/"+accountId+"/plan/"+planId;
+		String url = "http://my-telecom-account.default.svc.cluster.local:8282/update/account/"+accountId+"/plan/"+planId;
 		List<MediaType> mediaTypes = new ArrayList<MediaType>();
 		mediaTypes.add(MediaType.APPLICATION_JSON);
 		HttpHeaders headers = new HttpHeaders();
