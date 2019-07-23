@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pvpod
+spec:
+  containers:
+  - name: myportal
+    image: satish2790/my-portal-ui
+    volumeMounts:
+    - name: test-volume
+      mountPath: /test-vmdk
+  volumes:
+  - name: test-volume
+    persistentVolumeClaim:
+      claimName: pvc0001
