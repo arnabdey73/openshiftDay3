@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: my-portal-ui
-        image: satish2790/my-portal-ui:v12
+        image: satish2790/my-portal-ui:v3
         resources:
           requests:
             cpu: 400m
